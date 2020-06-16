@@ -1,2 +1,2 @@
-execute as @e[type=firework_rocket,nbt={FireworksItem:{tag:{createitem:1b}}}] at @s run function createshaft:create
+execute as @e[type=firework_rocket,nbt={FireworksItem:{tag:{createitem:1b}}}] at @s align xyz positioned ~0.5 ~-0.9375 ~0.5 unless entity @e[tag=create_shaft,distance=..0.1] positioned ~ ~1 ~ run function createshaft:create
 execute as @e[tag=create_shaft] at @s unless block ~ ~1 ~ minecraft:end_rod run function createshaft:kill
